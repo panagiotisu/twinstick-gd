@@ -3,7 +3,7 @@ class_name Accelerator extends Node
 
 @onready var _moveable_entity: CharacterBody2D = owner
 
-@export_group("Parameters")
+@export_group(GlobalStrings.ExportGroupNames.PROPERTIES)
 @export var max_speed: float = 80.0
 @export var acceleration_coefficient: float = 300.0
 

@@ -8,11 +8,11 @@ class DirectionalAnimationKey:
 	var animation_state_name: String
 	var cardinal: Cardinal
 
-@export_group("Components")
+@export_group(GlobalStrings.ExportGroupNames.COMPONENTS)
 @export var _animation_player: AnimationPlayer
 @export var _visuals: Node2D
 
-@export_group("Parameters")
+@export_group(GlobalStrings.ExportGroupNames.PROPERTIES)
 @export var _face_pattern: FacePattern = FacePattern.LINEAR
 
 var _directional_animation_map: Dictionary[DirectionalAnimationKey, StringName] = {}
