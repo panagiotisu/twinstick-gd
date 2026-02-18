@@ -17,9 +17,14 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 project/assembly_name="TwinstickGD"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/script-ide/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
+"res://addons/": "gray",
 "res://common/": "red",
 "res://scenes/": "orange",
 "res://ui/": "green",
