@@ -17,6 +17,15 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 project/assembly_name="TwinstickGD"
 
+[file_customization]
+
+folder_colors={
+"res://common/": "red",
+"res://scenes/": "orange",
+"res://ui/": "green",
+"res://world/": "teal"
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
