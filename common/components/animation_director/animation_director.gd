@@ -81,7 +81,7 @@ func _populate_directional_animation_map() -> void:
 
 func _get_cardinal_from_vector(face_direction: Vector2) -> Cardinal:
 	var angle_degrees := rad_to_deg(face_direction.angle())
-	var angle_degrees_wrapped := fmod(angle_degrees + 360, 360)
+	var angle_degrees_wrapped := wrapf(angle_degrees, 0.0, 360.0)
 	
 	match _face_pattern:
 		FacePattern.LINEAR:
@@ -96,13 +96,13 @@ func _get_cardinal_from_vector(face_direction: Vector2) -> Cardinal:
 			return _get_cardinal_from_octagon_pattern(angle_degrees_wrapped)
 		_:
 			return Cardinal.RIGHT
-			
+
 func _get_cardinal_from_square_pattern(angle_degrees_wrapped: float) -> Cardinal:
 	if angle_degrees_wrapped >= 0 and angle_degrees_wrapped < 180:
 		return Cardinal.DOWNRIGHT
 	else: # angle_degrees_wrapped >= 180 and angle_degrees_wrapped < 360:
 		return Cardinal.UPRIGHT
-	
+
 func _get_cardinal_from_rhombus_pattern(angle_degrees_wrapped: float) -> Cardinal:
 	if angle_degrees_wrapped >= 315 or angle_degrees_wrapped < 45:
 		return Cardinal.RIGHT
